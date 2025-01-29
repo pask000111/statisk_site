@@ -10,12 +10,205 @@ img {
   display: black;
 }
 
+/********************* Menu *****************************/
+
+header {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: lightpink;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 100px;
+}
+
+.menu li:last-child {
+  margin-right: 50px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #fff3c9;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.menu a:hover {
+  color: #2c5d6d;
+  background-color: #f7f4ea;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff3c9;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #547aa1;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/******************* Overordnet ************************/
+
+h1 {
+  font-family: "Sort Mill Goudy", serif;
+  color: black;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-family: "Sorts Mill Goudy", serif;
+  color: black;
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h3 {
+  font-family: "Sorts Mill Goudy", serif;
+  color: black;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p {
+  font-family: "Inter Tight", serif;
+  color: black;
+  font-size: large;
+  line-height: 2rem;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: lightpink;
+  padding-left: 1rem;
+  padding: 35px;
+  font-size: 10px;
+}
+
+footer p {
+  color: #fff3c9;
+  font-size: small;
+}
+
+.footer {
+  width: 30px;
+  height: 30px;
+}
+
+/*************** Fonts ************/
+
+.sorts-mill-goudy-regular {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sorts-mill-goudy-regular-italic {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inter-tight {
+  font-family: "Inter Tight", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 /********************* Forside ***********************/
 
 .category {
   width: 80%;
   height: 80px;
-  background-color: #466d5f;
+  background-color: lightblue;
   display: flex;
   align-items: center;
   border-radius: 8px;
@@ -43,16 +236,7 @@ img {
   }
 }
 
-/*********************** Produktliste ************************/
-
-.card {
-  padding: 10px;
-  background-color: antiquewhite;
-  grid-row: span 4;
-  display: grid;
-  grid-template-rows: subgrid;
-  position: relative;
-}
+/*********************** Produktliste og produkter ************************/
 
 .discount {
   position: absolute;
@@ -74,6 +258,17 @@ img {
   filter: grayscale(100%);
 } */
 
+/******************** Produktliste ************************/
+
+.card {
+  padding: 10px;
+  background-color: antiquewhite;
+  grid-row: span 4;
+  display: grid;
+  grid-template-rows: subgrid;
+  position: relative;
+}
+
 @media (min-width: 600px) {
   .product_list_container {
     display: grid;
@@ -81,4 +276,27 @@ img {
     grid-template-rows: auto auto;
     gap: 20px;
   }
+}
+
+/*************** Produkter ****************/
+
+.product {
+  padding: 10px;
+  background-color: antiquewhite;
+  grid-row: span 4;
+  display: grid;
+  grid-template-rows: subgrid;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+}
+
+form {
+  background-color: lightskyblue;
 }
