@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: black;
+}
+
+/********************* Forside ***********************/
+
+.category {
+  width: 80%;
+  height: 80px;
+  background-color: #466d5f;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  color: aliceblue;
+}
+
+.category_list_container {
+  display: grid;
+  gap: 25px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .category_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+}
