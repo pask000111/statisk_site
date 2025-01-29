@@ -67,7 +67,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #2c5d6d;
+  color: lightblue;
   background-color: #f7f4ea;
 }
 
@@ -278,6 +278,10 @@ footer p {
   }
 }
 
+.readmore {
+  color: black;
+}
+
 /*************** Produkter ****************/
 
 .product {
@@ -291,12 +295,18 @@ footer p {
 @media (min-width: 600px) {
   .product_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
   }
-}
 
-form {
-  background-color: lightskyblue;
+  .form {
+    background-color: lightskyblue;
+    padding: 40px;
+    grid-column: 2/3;
+  }
+
+  .product {
+    grid-column: 1/3;
+  }
 }
