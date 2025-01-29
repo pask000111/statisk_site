@@ -42,3 +42,43 @@ img {
     gap: 20px;
   }
 }
+
+/*********************** Produktliste ************************/
+
+.card {
+  padding: 10px;
+  background-color: antiquewhite;
+  grid-row: span 4;
+  display: grid;
+  grid-template-rows: subgrid;
+  position: relative;
+}
+
+.discount {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(243, 60, 60);
+  padding: 10px;
+}
+
+.soldout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(181, 177, 177);
+  padding: 25px;
+}
+
+/* .soldout-img {
+  filter: grayscale(100%);
+} */
+
+@media (min-width: 600px) {
+  .product_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+}
