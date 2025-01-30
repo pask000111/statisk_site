@@ -1,34 +1,39 @@
-let productId = 1165;
-let = productContainer = document.querySelector(".product_container");
+let productId = 1163;
+let productContainer = document.querySelector(".product_container");
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
-  .then((respone) => response.json())
+  .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
-        <div class="product">
-          <img class="nikebluse" src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="nikebluse" />
-          <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-          <h3>Product name: ${data.productdisplayname}</h3>
-          <p>Sahara Team India Fanwear Round Neck Jersey</p>
-          <h3>Color:</h3>
-          <p>Blue</p>
+        <div class="product_image">
+          <img class="nikebluse" src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="nikebluse" />
+        </div>
+        <div class="product_info">
+          <h2>${data.productdisplayname}</h2>
+          <h3>Product name:</h3>
+          <p>${data.productdisplayname}</p>
+          <h3>Articletype:</h3>
+          <p>${data.articletype}</p>
           <h3>Inventory number:</h3>
-          <p>1163</p>
+          <p>${data.id}</p>
+          <h3>Pris<h3>
+          <p>${data.price}
+        </div>
 
-          <div class="form">
-            <form>
-              <label>
-                Choose a size
-                <select name="size">
-                  <option>XS</option>
-                  <option>S</option>
-                  <option>M</option>
-                  <option>L</option>
-                  <option>XL</option>
-                </select>
-              </label>
-              <button>Add to basket</button>
-            </form>
-          </div>
+        <div class="product_form">
+          <form>
+            <h2>${data.productdisplayname}</h2>
+            <label>
+              <h3>Choose a size</h3>
+              <select name="size">
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </label>
+            <button>Add to basket</button>
+          </form>
         </div>`;
   });
