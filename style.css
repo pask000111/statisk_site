@@ -287,7 +287,7 @@ footer p {
 .product {
   padding: 10px;
   background-color: antiquewhite;
-  grid-row: span 4;
+  grid-row: span 6;
   display: grid;
   grid-template-rows: subgrid;
   position: relative;
