@@ -262,23 +262,43 @@ footer p {
   filter: grayscale(100%);
 } */
 
-/******************** Produktliste ************************/
-
-.card {
-  padding: 10px;
-  background-color: antiquewhite;
-  grid-row: span 4;
-  display: grid;
-  grid-template-rows: subgrid;
-  position: relative;
+.article {
+  color: gray;
 }
 
-@media (min-width: 600px) {
+/******************** Produktliste ************************/
+@media (min-width: 400px) {
   .product_list_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 4;
     gap: 20px;
+    position: relative;
+  }
+  .card {
+    padding: 10px;
+    background-color: antiquewhite;
+    grid-row: span 5;
+    display: grid;
+    grid-template-rows: subgrid;
+    position: relative;
+  }
+}
+@media (min-width: 900px) {
+  .product_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 5;
+    gap: 20px;
+    position: relative;
+  }
+  .card {
+    padding: 10px;
+    background-color: antiquewhite;
+    grid-row: span 5;
+    display: grid;
+    grid-template-rows: subgrid;
+    position: relative;
   }
 }
 
