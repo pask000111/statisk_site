@@ -248,6 +248,7 @@ footer p {
   right: 0;
   background-color: rgb(243, 60, 60);
   padding: 10px;
+  visibility: hidden;
 }
 
 .soldout {
@@ -255,12 +256,9 @@ footer p {
   top: 0;
   right: 0;
   background-color: rgb(181, 177, 177);
-  padding: 25px;
+  padding: 10px;
+  visibility: hidden;
 }
-
-/* .soldout-img {
-  filter: grayscale(100%);
-} */
 
 .article {
   color: gray;
@@ -304,6 +302,14 @@ footer p {
 
 .readmore {
   color: black;
+}
+
+.yesDiscount {
+  visibility: visible;
+}
+
+.yesSoldout {
+  visibility: visible;
 }
 
 /*************** Produkter ****************/
