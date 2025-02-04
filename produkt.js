@@ -19,7 +19,10 @@ function showProduct(data) {
           <h3>Inventory number:</h3>
           <p>${data.id}</p>
           <h3>Pris<h3>
-          <p>${data.price}
+          <p>${data.price},-</p>
+        <h3>Discount:</h3> 
+        <p>${data.discount}%</p>
+
         </div>
 
         <div class="product_form">
