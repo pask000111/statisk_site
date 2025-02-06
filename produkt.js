@@ -18,16 +18,19 @@ function showProduct(data) {
           <p>${data.articletype}</p>
           <h3>Inventory number:</h3>
           <p>${data.id}</p>
-          <h3>Pris<h3>
-          <p>${data.price},-</p>
-          <div class="discount ${data.discount && "yesDiscount"}"> <p>${data.discount}%</p></div>
-
+            <h3>Stock status</h3>
+            <p ${data.soldout && "yesSoldout"}>${data.soldout ? "Out of stock" : ""} ${!data.soldout ? "In stock" : ""}</p>
+         
         </div>
 
         <div class="product_form">
           <form>
             <h2>${data.productdisplayname}</h2>
             <label>
+             <h3>Price<h3>
+          <div class="grid_price"> <p>${data.price},-</p>
+          <div class="discount ${data.discount && "yesDiscount"}"> <p>${data.discount}%</p></div></div>
+
               <h3>Choose a size</h3>
               <select name="size">
                 <option>XS</option>
@@ -37,7 +40,7 @@ function showProduct(data) {
                 <option>XL</option>
               </select>
             </label>
-            <button>Add to basket</button>
+           <button>Add to basket</button>
           </form>
         </div>`;
 }

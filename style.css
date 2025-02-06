@@ -18,10 +18,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   background-color: lightpink;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  padding-left: 40px;
 }
 
 .logo img {
@@ -60,73 +61,17 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: #fff3c9;
+  color: rgb(130, 202, 226);
   text-decoration: none;
   transition: color 0.3s;
   text-align: center;
-}
-
-.menu a:hover {
-  color: lightblue;
+  border-radius: 8px;
   background-color: #f7f4ea;
 }
 
-.burger {
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.burger .line {
-  width: 100%;
-  height: 2px;
-  background-color: #fff3c9;
-  margin-bottom: 5px;
-  transition: 0.2s linear;
-}
-.burger {
-  display: none;
-}
-@media screen and (max-width: 800px) {
-  .menu {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
-  }
-
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
-  }
-
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
-  }
-
-  nav.active .menu {
-    display: block;
-    background-color: #547aa1;
-    position: absolute;
-    top: 94px;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-  }
-
-  nav.active .menu li {
-    margin: 10px 20px;
-  }
-
-  nav.active .menu a {
-    font-size: 24px;
-  }
+.menu a:hover {
+  color: #f7f4ea;
+  background-color: lightblue;
 }
 
 /******************* Overordnet ************************/
@@ -142,21 +87,28 @@ h1 {
   font-weight: 500;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 20px;
+}
+
+.flipped {
+  display: inline-block;
+  color: red;
+  transform: scaleX(-1);
 }
 
 h2 {
   font-family: "Sorts Mill Goudy", serif;
   color: black;
   font-size: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 15px;
 }
 
 h3 {
   font-family: "Sorts Mill Goudy", serif;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -171,19 +123,7 @@ p {
 
 footer {
   background-color: lightpink;
-  padding-left: 1rem;
   padding: 35px;
-  font-size: 10px;
-}
-
-footer p {
-  color: #fff3c9;
-  font-size: small;
-}
-
-.footer {
-  width: 30px;
-  height: 30px;
 }
 
 /*************** Fonts ************/
@@ -221,6 +161,13 @@ footer p {
   text-decoration: none;
   justify-content: center;
   color: aliceblue;
+  border: 2px solid red;
+}
+
+.category:hover {
+  color: rgb(130, 202, 226);
+  background-color: #f7f4ea;
+  border: 2px solid red;
 }
 
 .category_list_container {
@@ -242,29 +189,50 @@ footer p {
 
 /*********************** Produktliste og produkter ************************/
 
-.discount {
+.soldout {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 5%;
+  right: 10%;
   background-color: rgb(243, 60, 60);
   padding: 10px;
   visibility: hidden;
-}
-
-.soldout {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgb(181, 177, 177);
-  padding: 10px;
-  visibility: hidden;
+  border-radius: 8px;
 }
 
 .article {
   color: gray;
 }
 
-/******************** Produktliste ************************/
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 18px;
+  padding: 12px 24px;
+  border: 2px solid red;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  color: rgb(130, 202, 226);
+  background-color: #f7f4ea;
+}
+
+.grid_price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 @media (min-width: 400px) {
   .product_list_container {
     display: grid;
@@ -280,6 +248,31 @@ footer p {
     display: grid;
     grid-template-rows: subgrid;
     position: relative;
+  }
+
+  .grid_price {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .discount {
+    background-color: rgb(243, 60, 60);
+    padding: 10px;
+    visibility: hidden;
+    text-justify: center;
+    border-radius: 8px;
+  }
+  .discount_liste {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    background-color: rgb(243, 60, 60);
+    padding: 10px;
+    visibility: hidden;
+    text-justify: center;
+    border-radius: 8px;
   }
 }
 @media (min-width: 900px) {
@@ -298,6 +291,28 @@ footer p {
     grid-template-rows: subgrid;
     position: relative;
   }
+
+  .discount {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    background-color: rgb(243, 60, 60);
+    padding: 10px;
+    visibility: hidden;
+    text-justify: center;
+    border-radius: 8px;
+  }
+
+  .discount_liste {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    background-color: rgb(243, 60, 60);
+    padding: 10px;
+    visibility: hidden;
+    text-justify: center;
+    border-radius: 8px;
+  }
 }
 
 .readmore {
@@ -312,8 +327,6 @@ footer p {
   visibility: visible;
 }
 
-/*************** Produkter ****************/
-
 @media (min-width: 1000px) {
   .product_container {
     display: grid;
@@ -322,7 +335,7 @@ footer p {
   }
 }
 form {
-  background-color: lightskyblue;
+  background-color: rgba(255, 182, 193, 0.62);
   padding: 60px;
   border-radius: 10px;
 }
