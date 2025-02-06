@@ -20,8 +20,7 @@ function showProduct(data) {
           <p>${data.id}</p>
           <h3>Pris<h3>
           <p>${data.price},-</p>
-        <h3>Discount:</h3> 
-        <p>${data.discount}%</p>
+          <div class="discount ${data.discount && "yesDiscount"}"> <p>${data.discount}%</p></div>
 
         </div>
 
