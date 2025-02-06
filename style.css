@@ -314,15 +314,6 @@ footer p {
 
 /*************** Produkter ****************/
 
-.product {
-  padding: 10px;
-  background-color: antiquewhite;
-  grid-row: span 6;
-  display: grid;
-  grid-template-rows: subgrid;
-  position: relative;
-}
-
 @media (min-width: 1000px) {
   .product_container {
     display: grid;
@@ -340,6 +331,8 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  gap: 15px;
 }
 
 .product_form {
