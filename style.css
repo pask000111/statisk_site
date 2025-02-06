@@ -61,7 +61,7 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: lightblue;
+  color: rgb(130, 202, 226);
   text-decoration: none;
   transition: color 0.3s;
   text-align: center;
@@ -165,7 +165,7 @@ footer {
 }
 
 .category:hover {
-  color: lightblue;
+  color: rgb(130, 202, 226);
   background-color: #f7f4ea;
   border: 2px solid red;
 }
@@ -191,9 +191,9 @@ footer {
 
 .soldout {
   position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgb(181, 177, 177);
+  top: 5%;
+  right: 10%;
+  background-color: rgb(243, 60, 60);
   padding: 10px;
   visibility: hidden;
   border-radius: 8px;
@@ -223,8 +223,14 @@ button {
 }
 
 button:hover {
-  color: lightblue;
+  color: rgb(130, 202, 226);
   background-color: #f7f4ea;
+}
+
+.grid_price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 @media (min-width: 400px) {
@@ -244,10 +250,14 @@ button:hover {
     position: relative;
   }
 
+  .grid_price {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
   .discount {
-    position: absolute;
-    bottom: -130%;
-    right: 20%;
     background-color: rgb(243, 60, 60);
     padding: 10px;
     visibility: hidden;

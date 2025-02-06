@@ -36,7 +36,7 @@ function showList(products) {
         `<div class="card">
         <a href="produkt.html?id=${product.id}">
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="nikebluse" />
-          <div class="soldout ${product.soldout && "yesSoldout"}"> <p> soldout</p></div>
+          <div class="soldout ${product.soldout && "yesSoldout"}"> <p>Soldout</p></div>
         </a>
 
         <p class="article">${product.articletype} | ${product.brandname}</p>

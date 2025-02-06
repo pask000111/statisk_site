@@ -28,8 +28,8 @@ function showProduct(data) {
             <h2>${data.productdisplayname}</h2>
             <label>
              <h3>Price<h3>
-          <p>${data.price},-</p>
-          <div class="discount ${data.discount && "yesDiscount"}"> <p>${data.discount}%</p></div>
+          <div class="grid_price"> <p>${data.price},-</p>
+          <div class="discount ${data.discount && "yesDiscount"}"> <p>${data.discount}%</p></div></div>
 
               <h3>Choose a size</h3>
               <select name="size">
