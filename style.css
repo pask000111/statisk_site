@@ -227,12 +227,6 @@ button:hover {
   background-color: #f7f4ea;
 }
 
-.grid_price {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
 @media (min-width: 400px) {
   .product_list_container {
     display: grid;
@@ -263,6 +257,7 @@ button:hover {
     visibility: hidden;
     text-justify: center;
     border-radius: 8px;
+    text-align: center;
   }
   .discount_liste {
     position: absolute;
@@ -300,6 +295,7 @@ button:hover {
     padding: 10px;
     visibility: hidden;
     text-justify: center;
+    text-align: center;
     border-radius: 8px;
   }
 
@@ -312,6 +308,12 @@ button:hover {
     visibility: hidden;
     text-justify: center;
     border-radius: 8px;
+  }
+  .grid_price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
   }
 }
 
